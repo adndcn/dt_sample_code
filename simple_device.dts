@@ -1,0 +1,20 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+  fragment@0 {
+    target-path = "/";
+    __overlay__ {
+      simple_device {
+        compatible = "virtual,simple-device";
+        status = "okay";
+        test-names = "lp", "vpu";
+        test_value = <3 5>;
+        test_string = "next time";
+        child_node {
+          child_param = "child";
+        };
+      };
+    };
+  };
+};
